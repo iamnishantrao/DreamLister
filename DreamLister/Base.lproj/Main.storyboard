@@ -33,6 +33,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iAF-h2-DfX"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-eP-5pd">
                                 <rect key="frame" x="16" y="132" width="343" height="525"/>
@@ -221,17 +224,6 @@
                                     <constraint firstAttribute="height" constant="216" id="Mtq-X7-HO6"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twy-1Q-GXX">
-                                <rect key="frame" x="141" y="329" width="93" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Xv5-bk-ynI"/>
-                                    <constraint firstAttribute="width" constant="93" id="pPi-A5-snA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Select Store">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-MP-HF5" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
                                 <rect key="frame" x="124" y="84" width="235" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -245,6 +237,15 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-Na-dc2">
+                                <rect key="frame" x="16" y="331" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kfp-sZ-yTd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -257,17 +258,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8ur-MP-HF5" secondAttribute="trailing" id="J0C-nL-JyO"/>
                             <constraint firstItem="6N1-4r-hgb" firstAttribute="centerX" secondItem="lRq-2J-coz" secondAttribute="centerX" id="QVp-Xf-AKs"/>
                             <constraint firstItem="f3G-oE-Ejh" firstAttribute="leading" secondItem="6N1-4r-hgb" secondAttribute="trailing" constant="8" id="R0L-HL-wZx"/>
-                            <constraint firstItem="nMj-JY-bS7" firstAttribute="top" secondItem="twy-1Q-GXX" secondAttribute="bottom" constant="20" id="ROx-oq-iVx"/>
                             <constraint firstItem="pcB-Mq-akf" firstAttribute="top" secondItem="6N1-4r-hgb" secondAttribute="bottom" constant="8" id="S2g-W8-FxX"/>
                             <constraint firstItem="cC1-d8-hIX" firstAttribute="top" secondItem="nKG-b5-OFT" secondAttribute="bottom" constant="20" id="X10-M3-Jlk"/>
                             <constraint firstAttribute="trailing" secondItem="nMj-JY-bS7" secondAttribute="trailing" id="XEq-mS-AJ6"/>
                             <constraint firstItem="pcB-Mq-akf" firstAttribute="trailing" secondItem="MmJ-9V-3sl" secondAttribute="trailingMargin" id="YTS-Ch-gHK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R9V-Na-dc2" secondAttribute="trailing" id="aMS-XM-Est"/>
                             <constraint firstItem="nKG-b5-OFT" firstAttribute="top" secondItem="nMj-JY-bS7" secondAttribute="bottom" constant="20" id="bUr-1N-h6x"/>
                             <constraint firstItem="f3G-oE-Ejh" firstAttribute="top" secondItem="8ur-MP-HF5" secondAttribute="bottom" constant="20" id="cdd-W3-amh"/>
+                            <constraint firstItem="nMj-JY-bS7" firstAttribute="top" secondItem="R9V-Na-dc2" secondAttribute="bottom" constant="20" id="fR6-xq-Iao"/>
                             <constraint firstItem="f3G-oE-Ejh" firstAttribute="trailing" secondItem="MmJ-9V-3sl" secondAttribute="trailingMargin" id="gv7-WE-Tcp"/>
                             <constraint firstItem="6N1-4r-hgb" firstAttribute="centerY" secondItem="lRq-2J-coz" secondAttribute="centerY" id="i8G-Tt-ErM"/>
-                            <constraint firstItem="twy-1Q-GXX" firstAttribute="centerX" secondItem="MmJ-9V-3sl" secondAttribute="centerX" id="kVp-iD-lSG"/>
                             <constraint firstItem="pcB-Mq-akf" firstAttribute="leading" secondItem="MmJ-9V-3sl" secondAttribute="leadingMargin" id="niy-c6-dXf"/>
+                            <constraint firstItem="R9V-Na-dc2" firstAttribute="leading" secondItem="MmJ-9V-3sl" secondAttribute="leadingMargin" id="v90-hD-114"/>
                             <constraint firstItem="8ur-MP-HF5" firstAttribute="top" secondItem="yPv-68-wC6" secondAttribute="bottom" constant="20" id="yhc-lZ-J97"/>
                         </constraints>
                     </view>
